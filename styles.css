@@ -20,7 +20,7 @@ a {
 }
 
 #logo {
-    font-size: 24px;
+    font-size: 3.2vw;
     font-weight: bold;
     color: rgb(238, 164, 80);
     text-transform: uppercase;
@@ -39,7 +39,7 @@ a {
 
 #main-header nav a {
     color: rgb(185, 131, 31 );
-    font-size: 20px;
+    font-size: 1em;
 }
 
 #main-header nav a:hover {
@@ -51,10 +51,66 @@ a {
 main h1 {
     text-align: center;
     color: rgb(238, 164, 80);
-    font-size: 48px;
+    font-size: 4.2vw;
 }
 
 #latest-products {
     width: 80%;
     margin: 50px auto;
+}
+
+#latest-products ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+ul li.food-item {
+    background-color: rgb(228, 206, 182);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+ul li.food-item img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.food-item-content {
+    padding: 16px;
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(228, 157, 44);
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px 24px;
+}
+
+.btn:hover {
+    background-color: rgb(221, 134, 34);
+}
+
+@media screen and (max-width: 768px) {
+    #latest-products ul {
+        display: block;
+    }  
+    
+    ul li.food-item {
+        margin: 7px;
+        padding: 7px;
+    }
+    
+    ul li.food-item img {
+        width: 100%;
+    }
+
+#main-header nav a {
+    font-size: 0.8em;
+}
+
 }
